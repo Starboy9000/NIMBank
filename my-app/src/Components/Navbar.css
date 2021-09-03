@@ -1,0 +1,55 @@
+.App {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(230, 227, 227);
+}
+
+
+
+.Navbar {
+    background-color: #021E39;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+  }
+
+  .Navbar .leftSide {
+      flex: 50%;
+      background-color: #021E39;
+      margin-left: 25px;
+  }
+
+  .Navbar .rightSide .links {
+      max-height: 80px;
+  }
+
+  .Navbar .rightSide .links a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+  .Navbar .rightSide {
+      flex: 50%;
+      background-color: #002f5a;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .body {
+    background: linear-gradient(90deg, #e46992 0%, #daae51 100%);
+    height: 90vmin;
+    width: 100%;
+    overflow: hidden;
+
+  }

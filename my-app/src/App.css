@@ -1,0 +1,11 @@
+.navigationButtons {
+  color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
