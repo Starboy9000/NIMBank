@@ -9,7 +9,8 @@ const Navbar = () => {
 
 <div className="Navbar">
         <div className="leftSide">
-            <img src={logo} alt="logo" className="logo"/>
+        <input type="text" placeholder="Account Name Or Number" className="searchBar"/>
+         <img src={logo} alt="logo" className="logo"/>
         </div>
         <div className="rightSide">
             <div className="links">

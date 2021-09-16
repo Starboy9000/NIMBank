@@ -44,6 +44,7 @@
   .logo {
     display: flex;
     justify-content: center;
+    z-index: -1;
   }
 
   .body {
@@ -82,4 +83,18 @@
 
   .test {
     font-size: 1.5em;
+  }
+
+  input.searchBar {
+    display: flex;
+    margin-left: 810px;
+    margin-top: 20px;
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    border-radius: 8px;
+    box-shadow: black;
+
   }

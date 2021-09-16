@@ -20,7 +20,6 @@ const App = () => {
     <Route path="/Activity" component={Activity}/>
     <Route path="/Accounts" component={Accounts}/>
     </Switch>
-    
     </div>
     </Router>
   )

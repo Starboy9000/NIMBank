@@ -3,7 +3,7 @@
 function Activity(){
     return (
         <div className="rightSide">
-            <h1>Activity Page</h1>
+            <h1></h1>
         </div>
     )
 }
