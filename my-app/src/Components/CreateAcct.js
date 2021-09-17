@@ -65,7 +65,6 @@ function CreateAcct() {
                 <label> Initial Balance: </label>
                     <input type='number' value={balance} onChange={e => setBalance(e.target.value)} />  <br/>
                 <button onClick={handleCreate}>Submit</button>
-                <div className="clientList"> Client list:   </div>
                 </div>  
         )
     };

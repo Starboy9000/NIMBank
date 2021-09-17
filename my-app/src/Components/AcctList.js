@@ -13,7 +13,7 @@ const AcctList = () => {
         }, 1000)
     })
     return (
-        <TableContainer className="Accounts">
+        <TableContainer className="clientList">
             <Table size={'small'}>
                 <TableHead>
                     <TableCell> Account Number </TableCell> 

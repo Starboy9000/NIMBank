@@ -26,15 +26,15 @@ function Accounts() {
 
     
     return(
-        <div className="Accounts">
+        <div className="Activity">
             <h2>Withdraw Or Deposit</h2>
             <form action="">    
                 <label>Select Account </label>
-                <input type="text" required onFocus={Jerick} ref={selectAccount}/>
+                <input type="text" required onBlur={Jerick} ref={selectAccount}/>
                 <label>Select Ammount To Withdraw</label>
-                <input type="text" onFocus={Jerick} ref={withdrawAmnt}/>
+                <input type="text" onBlur={Jerick} ref={withdrawAmnt}/>
                 <label>Select Ammount To Deposit</label>
-                <input type="text" onFocus={Jerick} ref={depositAmnt}/>
+                <input type="text" onBlur={Jerick} ref={depositAmnt}/>
                 <label>Would You Like An Online Reciept for your transaction?</label>
                 <select ref={onlineReciept}>
                     <option value="Yes">Yes</option>
@@ -44,14 +44,14 @@ function Accounts() {
                 <h2>Transfer Funds</h2>
 
                 <label>Ammount To Transfer</label>
-                <input type="text" ref={transferAmnt} onFocus={Allen}/>
+                <input type="text" ref={transferAmnt} onBlur={Allen}/>
                 <label>Account Number From</label>
-                <select ref={accountFrom} onFocus={Allen}>
+                <select ref={accountFrom} onBlur={Allen}>
                     <option>xxx-x1x-xxx</option>
                     <option>xxx-xxx-x2x</option>
                 </select>
                 <label>Account Number To</label>
-                <select ref={accountTo } onFocus={Allen}>
+                <select ref={accountTo } onBlur={Allen}>
                     <option>x2x-xxx-xxx</option>
                     <option>xxx-x1x-xxx</option>
                 </select>

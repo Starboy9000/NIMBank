@@ -1,11 +1,8 @@
+import React from 'react'
 
-import './Navbar.css'
-
-const Background = () => {
+const bgCSS = () => {
     return (
-      <div>
-          <div className="body">
-          <div class="box">
+        <div class="box">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -15,11 +12,9 @@ const Background = () => {
                 <div></div>
                 <div></div>
                 <div></div>
-                <div></div>
+                <div></div> 
             </div>
-          </div>
-      </div>
     )
-  }
+}
 
-export default Background;
+export default bgCSS
