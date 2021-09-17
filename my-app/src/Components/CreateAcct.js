@@ -7,7 +7,7 @@ function CreateAcct() {
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
-    const [initialBal, setBalance] = useState('')
+    const [balance, setBalance] = useState('')
     const [accountNumber, setAccountNumber] = useState ('')
 
     const handleAcctNum = (e) => {
@@ -26,7 +26,7 @@ function CreateAcct() {
             Name : name,
             Email : email,
             Password : password,
-            Balance : initialBal
+            Balance : balance
         }
 
         
@@ -61,7 +61,7 @@ function CreateAcct() {
                 <label> Password: </label>
                     <input type='password' value={password} onChange={e => setPassword(e.target.value)} />  <br/>
                 <label> Initial Balance: </label>
-                    <input type='number' value={initialBal} onChange={e => setBalance(e.target.value)} />  <br/>
+                    <input type='number' value={balance} onChange={e => setBalance(e.target.value)} />  <br/>
                 <button onClick={handleCreate}>Submit</button>
                 <div> Client list:   </div>
                 </div>

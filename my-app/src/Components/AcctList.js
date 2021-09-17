@@ -5,24 +5,25 @@ import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from '
 
 const AcctList = () => {
 
-    const [clientTable, setClientTable] = useState(JSON.parse(localStorage.getItem('client')))
+    const [accountTable, setAccountTable] = useState(JSON.parse(localStorage.getItem('client')))
 
     useEffect (() => {
         setInterval(() => {
-        setHi(JSON.parse(localStorage.getItem('client')))
+        setAccountTable(JSON.parse(localStorage.getItem('client')))
         }, 1000)
     })
     return (
         <TableContainer>
             <Table size={'small'}>
                 <TableHead>
+                    <TableCell> Account Number </TableCell> 
                     <TableCell> Account Name </TableCell> 
                     <TableCell> Email </TableCell>
                     <TableCell> Password </TableCell>
                     <TableCell> Balance </TableCell>
                 </TableHead>
                 <TableBody>
-                    {clientTable && clientTable.map(row => { 
+                    {accountTable && accountTable.map(row => { 
                         return (
                         <TableRow>
                             <TableCell>{row.AccountNumber}</TableCell>
