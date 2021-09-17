@@ -1,5 +1,8 @@
 import './Activity.css'
 import {useRef} from 'react'
+import Deposit from './Deposit';
+import Withdraw from './Withdraw';
+
 
 
 function Accounts() {
@@ -29,12 +32,14 @@ function Accounts() {
         <div className="Activity">
             <h2>Withdraw Or Deposit</h2>
             <form action="">    
-                <label>Select Account </label>
+                {/* <label>Select Account </label>
                 <input type="text" required onBlur={Jerick} ref={selectAccount}/>
                 <label>Select Ammount To Withdraw</label>
                 <input type="text" onBlur={Jerick} ref={withdrawAmnt}/>
-                <label>Select Ammount To Deposit</label>
-                <input type="text" onBlur={Jerick} ref={depositAmnt}/>
+                <label>Select Ammount To Deposit</label> */}
+                <Deposit/>
+                {/* <input type="text" onBlur={Jerick} ref={depositAmnt}/> */}
+                <Withdraw/>
                 <label>Would You Like An Online Reciept for your transaction?</label>
                 <select ref={onlineReciept}>
                     <option value="Yes">Yes</option>

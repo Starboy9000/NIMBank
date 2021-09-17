@@ -28,7 +28,7 @@ const Deposit = () => {
     
 
     return (
-        <div>
+        <div className="Deposit">
 
                 <label> Account Number: </label>
                     <input type='number' value={inputAccountNum} onChange={(e) => setAccountNum(e.target.value)}/> <br/>

@@ -158,6 +158,12 @@
   cursor: pointer;
 }
 
+.Deposit {
+  top: 200px;
+  left: 200px;
+
+}
+
 .box div {
   position: absolute;
   width: 60px;
@@ -248,3 +254,4 @@
     opacity: 0;
   }
 }
+
