@@ -9,7 +9,6 @@ function CreateAcct() {
     const [email, setEmail] = useState('')
     const [initialBal, setBalance] = useState('')
 
-    
 
     const handleCreate = (e) => {
        
