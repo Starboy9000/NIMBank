@@ -8,21 +8,30 @@ function CreateAcct() {
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
     const [initialBal, setBalance] = useState('')
+    const [accountNumber, setAccountNumber] = useState ('')
 
+    const handleAcctNum = (e) => {
+        let date = new Date();
+        let min = (date.getMinutes()).toString().substr(-2);
+        setAccountNumber(Math.floor(Math.random() * 90) + min)
+    }
 
     const handleCreate = (e) => {
-       
+        handleAcctNum()
+        
         e.preventDefault();
 
-        const newAcctDetails = {    
+        const newAcctDetails = {
+            AccountNumber : accountNumber,
             Name : name,
             Email : email,
             Password : password,
             Balance : initialBal
         }
-    
 
+        
         if (localStorage.getItem('client')) {
+            
             let container = []
             for (let i = 0; i < JSON.parse(localStorage.getItem('client')).length; i++) {
                 container.push(JSON.parse(localStorage.getItem('client'))[i])
@@ -39,10 +48,10 @@ function CreateAcct() {
            localStorage.setItem('client',JSON.stringify(container))
         }
 
-        console.log()
-
-    }
     
+    }
+
+
         return (
             <div className="App">
                 <label> Name: </label>
@@ -54,7 +63,7 @@ function CreateAcct() {
                 <label> Initial Balance: </label>
                     <input type='number' value={initialBal} onChange={e => setBalance(e.target.value)} />  <br/>
                 <button onClick={handleCreate}>Submit</button>
-                <div> Client list:  {client.current} </div>
+                <div> Client list:   </div>
                 </div>
         )
     };

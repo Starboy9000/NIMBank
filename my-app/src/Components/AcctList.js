@@ -25,6 +25,7 @@ const AcctList = () => {
                     {clientTable && clientTable.map(row => { 
                         return (
                         <TableRow>
+                            <TableCell>{row.AccountNumber}</TableCell>
                             <TableCell>{row.Name}</TableCell>
                             <TableCell>{row.Email}</TableCell>
                             <TableCell>{row.Password}</TableCell>
