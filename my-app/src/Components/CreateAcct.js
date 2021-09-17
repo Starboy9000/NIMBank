@@ -53,7 +53,7 @@ function CreateAcct() {
         return (
             
             <div className="Accounts">
-                <h2>Create A Client Account</h2>
+                <h2>Create An Account</h2>
                 <label> Name: </label>
                     <input type='text' value={name} onChange={e => setName(e.target.value)} /> <br/>
                 <label> Email: </label>

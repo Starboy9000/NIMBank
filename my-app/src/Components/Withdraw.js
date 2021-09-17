@@ -25,13 +25,19 @@ const Withdraw = () => {
     }
     
     return (
-        <div>
+            <div className="withdraw">
+                <h2>Withdraw:</h2>
                 <label> Account Number: </label>
-                    <input type='number' value={inputAccountNum} onChange={(e) => setAccountNum(e.target.value)}/> <br/>
+                    <input type='number' value={inputAccountNum} onChange={(e) => setAccountNum(e.target.value)}/> 
                 <label> Amount: </label>
-                    <input type='number' value={inputWithdrawalAmt}  onChange={(e) => setBalance(e.target.value)}/>  <br/>
-                     <button onClick={handleWithdraw}>Submit</button> 
-        </div>
+                    <input type='number' value={inputWithdrawalAmt}  onChange={(e) => setBalance(e.target.value)}/>  
+                    <label>Transaction Reciept?</label>
+                <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                     <button onClick={handleWithdraw} className="button"></button> 
+            </div>
         )
     }
 

@@ -2,6 +2,7 @@ import './Activity.css'
 import {useRef} from 'react'
 import Deposit from './Deposit';
 import Withdraw from './Withdraw';
+import AcctList2 from './AcctList2';
 
 
 
@@ -30,38 +31,29 @@ function Accounts() {
     
     return(
         <div className="Activity">
-            <h2>Withdraw Or Deposit</h2>
             <form action="">    
                 {/* <label>Select Account </label>
                 <input type="text" required onBlur={Jerick} ref={selectAccount}/>
                 <label>Select Ammount To Withdraw</label>
                 <input type="text" onBlur={Jerick} ref={withdrawAmnt}/>
                 <label>Select Ammount To Deposit</label> */}
-                <Deposit/>
-                {/* <input type="text" onBlur={Jerick} ref={depositAmnt}/> */}
                 <Withdraw/>
-                <label>Would You Like An Online Reciept for your transaction?</label>
-                <select ref={onlineReciept}>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-
-                <h2>Transfer Funds</h2>
-
-                <label>Ammount To Transfer</label>
-                <input type="text" ref={transferAmnt} onBlur={Allen}/>
-                <label>Account Number From</label>
-                <select ref={accountFrom} onBlur={Allen}>
-                    <option>xxx-x1x-xxx</option>
-                    <option>xxx-xxx-x2x</option>
-                </select>
-                <label>Account Number To</label>
-                <select ref={accountTo } onBlur={Allen}>
-                    <option>x2x-xxx-xxx</option>
-                    <option>xxx-x1x-xxx</option>
-                </select>
+                {/* <input type="text" onBlur={Jerick} ref={depositAmnt}/> */}
+                <Deposit/>
+                
+                <div className="transferFunds">
+                <h2>Transfer Funds:</h2>
+                <label>Amount To Transfer:</label>
+                    <input type="text" ref={transferAmnt} onBlur={Allen}/>
+                <label>Account Number From:</label>
+                    <input type="text" ref={transferAmnt} onBlur={Allen}/>
+                <label>Account Number To:</label>
+                    <input type="text" ref={transferAmnt} onBlur={Allen}/>
                 <button type="submit"></button>
+                </div>
             </form>
+            <h2 className="clients">Client List</h2>
+            <AcctList2/>  
         </div>
     )
 }

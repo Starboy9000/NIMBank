@@ -27,15 +27,19 @@ const Deposit = () => {
     
 
     return (
-        <div className="Deposit">
-
+        <div className="deposit">
+                <h2>Deposit:</h2>
                 <label> Account Number: </label>
-                    <input type='number' value={inputAccountNum} onChange={(e) => setAccountNum(e.target.value)}/> <br/>
+                    <input type='number' value={inputAccountNum} onChange={(e) => setAccountNum(e.target.value)}/> 
                 <label> Amount: </label>
-                    <input type='number' value={inputDepositAmt}  onChange={(e) => setBalance(e.target.value)}/>  <br/>
-                     <button onClick={handleDeposit}>Submit</button> 
+                    <input type='number' value={inputDepositAmt}  onChange={(e) => setBalance(e.target.value)}/>  
+                    <label>Transaction Reciept?</label>
+                <select>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                     <button onClick={handleDeposit} className="Button"></button> 
                 
-        
         </div>
         )
     }
