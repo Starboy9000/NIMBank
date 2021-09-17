@@ -10,9 +10,8 @@ function CreateAcct() {
     const [accountNumber, setAccountNumber] = useState ('')
 
     const handleAcctNum = (e) => {
-        let date = new Date();
-        let min = (date.getMinutes()).toString().substr(-2);
-        setAccountNumber(Math.floor(Math.random() * 90) + min)
+        let randomAcctNumber = Date.now().toString().substr(0,12)
+        setAccountNumber(randomAcctNumber)
     }
 
     const handleCreate = (e) => {

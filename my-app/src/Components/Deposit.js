@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 const storedClientAccounts = 'client';
 
 const Deposit = () => {
-    
-    const [depAmount, setDepAmount] = useState ('')
+
     const [client, setClient] = useState ([])
     const [account, setAccount] = useState ('')
     const [accountNum, setAccountNum] = useState ('')
