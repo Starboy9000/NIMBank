@@ -1,34 +1,44 @@
-import React from 'react'
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-export const Deposit = () => {
-    const [balance, setBalance] = useState ('')
-    const [amount, setAmount] = useState ('')
+const storedClientAccounts = 'client';
 
+const Deposit = () => {
     
-    const deposit = (balance, amount, accountnumber, setaccountnumber, setbalance) => {
-        let totalbalance = parseInt(balance) + parseInt(amount)
-        let container = []
-        let userData = JSON.parse(localStorage.getItem('userData'))
-        for (let i = 0; i < userData.length; i++) {
-             container.push(userData[i])
-        }
-        for (let i = 0; i < container.length; i++) {
-             if (container[i].accountID === accountnumber) {
-                  container[i].initialbalance = totalbalance
-                  console.log('new balance is ' + totalbalance)
-                  const { transactionID, date, type, balance } = transaction(parseInt(amount), totalbalance, container[i], 'deposit')
-                  emailFormat(createFullName(container[i].firstname, container[i].middlename, container[i].lastname), container[i].email, transactionID, container[i].accountID, balance, amount, type, date)
-   
-   
+    const [depAmount, setDepAmount] = useState ('')
+    const [client, setClient] = useState ([])
+    const [account, setAccount] = useState ('')
+    const [accountNum, setAccountNum] = useState ('')
+    const [balance, setBalance] = useState('')
+ 
+    var inputDepositAmt;
+    var inputAccountNum;
+
+
+    const handleDeposit = () => {
+
+        let clientDetails = JSON.parse(localStorage.getItem(storedClientAccounts));
+        
+        for (let i = 0; i < clientDetails.length; i++) {
+             if (clientDetails[i].AccountNumber === accountNum) {
+                clientDetails[i].Balance = clientDetails[i].Balance - (-balance)
              }
         }
-   
-        localStorage.setItem('userData', JSON.stringify(container))
-        setaccountnumber('')
-        setbalance(0)
+        localStorage.setItem('client', JSON.stringify(clientDetails))
     }
+    
+
     return (
+        <div>
+
+                <label> Account Number: </label>
+                    <input type='number' value={inputAccountNum} onChange={(e) => setAccountNum(e.target.value)}/> <br/>
+                <label> Amount: </label>
+                    <input type='number' value={inputDepositAmt}  onChange={(e) => setBalance(e.target.value)}/>  <br/>
+                     <button onClick={handleDeposit}>Submit</button> 
+                
         
-    )
-}
+        </div>
+        )
+    }
+
+export default Deposit;
