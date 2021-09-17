@@ -12,7 +12,6 @@ const Deposit = () => {
     var inputDepositAmt;
     var inputAccountNum;
 
-
     const handleDeposit = () => {
 
         let clientDetails = JSON.parse(localStorage.getItem(storedClientAccounts));
