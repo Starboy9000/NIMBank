@@ -9,13 +9,15 @@ function CreateAcct() {
     const [balance, setBalance] = useState('')
     const [accountNumber, setAccountNumber] = useState ('')
 
-    const handleAcctNum = (e) => {
-        let randomAcctNumber = Date.now().toString().substr(0,12)
-        setAccountNumber(randomAcctNumber)
-    }
+    let randomAcctNumber = Date.now().toString().substr(0,12)
+
+    useEffect (() => {
+            setInterval(() => {
+                setAccountNumber(randomAcctNumber)
+            }, 1000)
+    })
 
     const handleCreate = (e) => {
-        handleAcctNum()
         
         e.preventDefault();
 
@@ -26,11 +28,11 @@ function CreateAcct() {
             Password : password,
             Balance : balance
         }
-
         
         if (localStorage.getItem('client')) {
             
             let container = []
+            
             for (let i = 0; i < JSON.parse(localStorage.getItem('client')).length; i++) {
                 container.push(JSON.parse(localStorage.getItem('client'))[i])
             } 
@@ -39,11 +41,11 @@ function CreateAcct() {
             
             localStorage.setItem('client',JSON.stringify(container))
         } else {
-           let container = []
+            let container = []
 
-           container.push(newAcctDetails)
-            
-           localStorage.setItem('client',JSON.stringify(container))
+            container.push(newAcctDetails)
+                
+            localStorage.setItem('client',JSON.stringify(container))
         }
 
     
