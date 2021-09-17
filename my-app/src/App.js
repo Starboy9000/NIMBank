@@ -1,8 +1,8 @@
 import React from 'react'; 
 import './App.css';
 import Navbar from './Components/Nav';
-import Activity from './Components/Activity'
-import Accounts from './Components/Accounts'
+import Activity from './Components/Accounts'
+import Accounts from './Components/Activity'
 import Body from './Components/Camera';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Background from './Components/Background';
@@ -17,8 +17,8 @@ const App = () => {
     <Background/>
     <Switch> 
     <Route path="/" exact component={Body} />
-    <Route path="/Activity" component={Activity}/>
     <Route path="/Accounts" component={Accounts}/>
+    <Route path="/Activity" component={Activity}/>
     </Switch>
     </div>
     </Router>

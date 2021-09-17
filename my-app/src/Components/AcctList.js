@@ -13,7 +13,7 @@ const AcctList = () => {
         }, 1000)
     })
     return (
-        <TableContainer>
+        <TableContainer className="Accounts">
             <Table size={'small'}>
                 <TableHead>
                     <TableCell> Account Number </TableCell> 
@@ -23,6 +23,7 @@ const AcctList = () => {
                     <TableCell> Balance </TableCell>
                 </TableHead>
                 <TableBody>
+                
                     {accountTable && accountTable.map(row => { 
                         return (
                         <TableRow>
@@ -32,12 +33,14 @@ const AcctList = () => {
                             <TableCell>{row.Password}</TableCell>
                             <TableCell>{row.Balance}</TableCell>
                         </TableRow>
+                        
                         )
                         
                     })}
                 </TableBody>
             </Table>
         </TableContainer>
+        
     )
 
     

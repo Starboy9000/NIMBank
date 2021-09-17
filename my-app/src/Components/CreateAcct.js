@@ -53,7 +53,9 @@ function CreateAcct() {
 
 
         return (
-            <div className="App">
+            
+            <div className="Accounts">
+                <h2>Create A Client Account</h2>
                 <label> Name: </label>
                     <input type='text' value={name} onChange={e => setName(e.target.value)} /> <br/>
                 <label> Email: </label>
@@ -63,8 +65,8 @@ function CreateAcct() {
                 <label> Initial Balance: </label>
                     <input type='number' value={balance} onChange={e => setBalance(e.target.value)} />  <br/>
                 <button onClick={handleCreate}>Submit</button>
-                <div> Client list:   </div>
-                </div>
+                <div className="clientList"> Client list:   </div>
+                </div>  
         )
     };
 
