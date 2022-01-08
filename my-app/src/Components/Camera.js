@@ -3,7 +3,6 @@
 import React from 'react'; 
 import './Navbar.css'
 import camera from '../Images/Camera.png'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Camera = () => {
   return (
