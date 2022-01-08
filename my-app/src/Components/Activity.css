@@ -200,6 +200,12 @@
   width: 18%;
 }
 
+.transferFunds {
+  position: fixed;
+  top: 100px;
+  width: 18%;
+}
+
 .box div {
   position: absolute;
   width: 60px;

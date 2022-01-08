@@ -2,6 +2,7 @@ import './Activity.css'
 import {useRef} from 'react'
 import Deposit from './Deposit';
 import Withdraw from './Withdraw';
+import Transfer from './Transfer';
 import AcctList2 from './AcctList2';
 
 
@@ -38,10 +39,10 @@ function Accounts() {
                 <input type="text" onBlur={Jerick} ref={withdrawAmnt}/>
                 <label>Select Ammount To Deposit</label> */}
                 <Withdraw/>
+                <Transfer/>
                 {/* <input type="text" onBlur={Jerick} ref={depositAmnt}/> */}
                 <Deposit/>
-                
-                <div className="transferFunds">
+                {/* <div className="transferFunds">
                 <h2>Transfer Funds:</h2>
                 <label>Amount To Transfer:</label>
                     <input type="text" ref={transferAmnt} onBlur={Allen}/>
@@ -50,7 +51,7 @@ function Accounts() {
                 <label>Account Number To:</label>
                     <input type="text" ref={transferAmnt} onBlur={Allen}/>
                 <button type="submit"></button>
-                </div>
+                </div> */}
             </form>
             <h2 className="clients">Client List</h2>
             <AcctList2/>  

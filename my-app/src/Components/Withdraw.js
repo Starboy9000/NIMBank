@@ -18,7 +18,7 @@ const Withdraw = () => {
         
         for (let i = 0; i < clientDetails.length; i++) {
              if (clientDetails[i].AccountNumber === accountNum) {
-                clientDetails[i].Balance = clientDetails[i].Balance + (-balance)
+                clientDetails[i].Balance = clientDetails[i].Balance - (-balance)
              }
         }
         localStorage.setItem('client', JSON.stringify(clientDetails))

@@ -31,14 +31,15 @@ const Transfer = () => {
     }
     
     return (
-        <div>
-                <label> Account Number From: </label>
-                    <input type='number' value={acct1} onChange={(e) => setAccountNum1(e.target.value)}/> <br/>
-                <label> Account Number To: </label>
-                    <input tyspe='number' value={acct2} onChange={(e) => setAccountNum2(e.target.value)}/> <br/>
-                <label> Amount: </label>
-                    <input type='number' value={inputTransferMoney}  onChange={(e) => setInputTransferMoney(e.target.value)}/>  <br/>
-                     <button onClick={handleTransfer}>Submit</button> 
+        <div className="transferFunds">
+            <h2>Transfer:</h2>
+            <label> Account Number From: </label>
+                <input type='number' value={acct1} onChange={(e) => setAccountNum1(e.target.value)}/>
+            <label> Account Number To: </label>
+                <input tyspe='number' value={acct2} onChange={(e) => setAccountNum2(e.target.value)}/>
+            <label> Amount: </label>
+                <input type='number' value={inputTransferMoney}  onChange={(e) => setInputTransferMoney(e.target.value)}/>
+                <button onClick={handleTransfer} className="button"></button> 
         </div>
         )
     }
